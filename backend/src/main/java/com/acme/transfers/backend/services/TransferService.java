@@ -5,7 +5,6 @@ import com.acme.transfers.backend.dto.TransferResponseDTO;
 import com.acme.transfers.backend.entities.Transfer;
 import com.acme.transfers.backend.mapper.TransferMapper;
 import com.acme.transfers.backend.repositories.TransferRepository;
-import com.acme.transfers.backend.services.Exceptions.InvalidTransferDateException;
 import com.acme.transfers.backend.services.Exceptions.TransferNotFoundException;
 import com.acme.transfers.backend.services.fee.FeeCalculator;
 import lombok.AllArgsConstructor;
@@ -15,9 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 
 @Service
 @AllArgsConstructor
