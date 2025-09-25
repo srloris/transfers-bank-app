@@ -14,3 +14,12 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: transferencia-frontend:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
