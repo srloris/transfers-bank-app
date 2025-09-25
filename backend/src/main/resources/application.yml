@@ -1,0 +1,9 @@
+spring:
+  main:
+    web-application-type: servlet
+  application:
+    name: backend
+  profiles:
+    active: test
+  jpa:
+    open-in-view: false
